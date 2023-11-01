@@ -4,19 +4,19 @@
 
 ## Step.1 
 ```
-$ g++ ./src/test_1.cpp
+$ g++ ./test/test_1.cpp
 $ ./a.out ./test/small_1.txt # small case でテストする場合
 $ ./a.out ./test/large_1.txt # large case でテストする場合
 ```
 ## Step.2 
 ```
-$ g++ ./src/test_2.cpp
+$ g++ ./test/test_2.cpp
 $ ./a.out ./test/small_2.txt # small case でテストする場合
 $ ./a.out ./test/large_2.txt # large case でテストする場合
 ```
 ## Step.3 
 ```
-$ g++ ./src/test_3.cpp
+$ g++ ./test/test_3.cpp
 $ ./a.out ./test/small_3.txt # small case でテストする場合
 $ ./a.out ./test/large_3.txt # large case でテストする場合
 ```

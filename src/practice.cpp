@@ -1,5 +1,7 @@
-// calc 1 + 2 + ... + n 
-void sum(long& out,long n){
-  // out = 0;
-  // for(long i=1;i<=n;i++) out += 1;
+// calc a^n % mod
+void pow(long& out, long a, long n, long mod) {
+  //out = 1;
+  //for (long i = 0; i < n; i++) {
+  //  out = (out * a) % mod;
+  //}
 }

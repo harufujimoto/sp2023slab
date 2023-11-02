@@ -4,20 +4,31 @@
 #include "./../src/practice.cpp"
 
 int main() {
-  std::vector<long> a = {
-      3, 4, 10, 100, 1000000000LL, 10000000001LL, 10000000002LL, 10000000003LL};
+  const long P = 998244353;
+  const long a = 2023;
 
-  for (int i = 0; i < (int)a.size(); i++) {
+  std::vector<long> n = {0,     1,      10,      100,      1000,
+                         10000, 100000, 1000000, 10000000, long(1e12)};
+  std::vector<long> z = {1,         2023,     329969289, 340092910, 800061172,
+                         820078466, 47962465, 363599901, 836634156, 596422706};
+
+  int cnt = 0;
+  for (int i = 0; i < (int)n.size(); i++) {
     std::cout << "Case #" << i << ": ";
     long res;
-    sum(res, a[i]);
-    long expected = a[i] * (a[i] + 1) / 2;
-    if (res == expected) {
+    pow(res, a, n[i], P);
+    if (res == z[i]) {
       std::cout << "OK" << std::endl;
+      cnt++;
     } else {
       std::cout << "ERROR" << std::endl;
-      std::cout << "atcual : " << res << std::endl;
-      std::cout << "expected : " << expected << std::endl;
+      std::cout << "actual : " << res << std::endl;
+      std::cout << "expected : " << z[i] << std::endl;
     }
+  }
+
+  std::cout << cnt << "/" << (int)n.size() << " cases passed" << std::endl;
+  if (cnt != (int)n.size()) {
+    exit(-1);
   }
 }
